@@ -19,5 +19,5 @@ secretGenerator:
 patches:
   - target:
       kind: Deployment
-      name: application-operator-demo
+      name: docker-debug
     path: patches/deployment.yaml

@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: application-operator-demo
+  name: docker-debug
 spec:
   replicas: 2
