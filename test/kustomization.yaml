@@ -1,0 +1,17 @@
+resources:
+  - ../all
+
+namespace: applications
+namePrefix: test-
+commonLabels:
+  env: test
+
+configMapGenerator:
+  - name: docker-debug-env
+    envs:
+      - resources/env-configmap.yaml
+
+secretGenerator:
+  - name: docker-debug-env
+    literals:
+      - SECRET=a-test-secret

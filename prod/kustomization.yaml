@@ -1,0 +1,18 @@
+resources:
+  - ../all
+
+namespace: applications
+namePrefix: prod-
+commonLabels:
+  env: prod
+
+secretGenerator:
+  - name: docker-debug-env
+    literals:
+      - SECRET=a-prod-secret
+
+patches:
+  target:
+    kind: Deployment
+    name: application-operator-demo
+  path: patches/deployment.yaml
