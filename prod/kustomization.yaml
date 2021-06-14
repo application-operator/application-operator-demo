@@ -12,7 +12,7 @@ secretGenerator:
       - SECRET=a-prod-secret
 
 patches:
-  target:
-    kind: Deployment
-    name: application-operator-demo
-  path: patches/deployment.yaml
+  - target:
+      kind: Deployment
+      name: application-operator-demo
+    path: patches/deployment.yaml
