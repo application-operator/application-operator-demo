@@ -6,6 +6,11 @@ namePrefix: prod-
 commonLabels:
   env: prod
 
+configMapGenerator:
+  - name: docker-debug-env
+    envs:
+      - resources/env-configmap.yaml
+
 secretGenerator:
   - name: docker-debug-env
     literals:
