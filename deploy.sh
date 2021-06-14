@@ -11,6 +11,7 @@ resources:
   - $3
 
 EOF
+mkdir -p $3/resources
 echo VERSION=$4 > $3/resources/env-configmap.yaml
 
 mkdir -p target
